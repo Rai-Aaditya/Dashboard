@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup/Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+        .form-structor header {
+            display: block;
+            text-align: center;
+        }
+
+        .form-structor header h2 {
+            position: relative;
+            top: -60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-structor">
+        <div class="signup">
+            <header>
+                <h2 class="form-title">Admin</h1>
+            </header>
+            <h2 class="form-title" id="signup">Sign up</h2>
+            <div class="form-holder">
+                <form action="/adminSignup" method="post">
+                    <input type="text" name="name" class="input" placeholder="Name" autocomplete="off" />
+                    <input type="email" name="email" class="input" placeholder="Email" autocomplete="off"/>
+                    <input type="password" name="password" class="input" placeholder="Password" autocomplete="off"/>
+                </form>
+            </div>
+            <button class="submit-btn">Sign up</button>
+        </div>
+        <div class="login slide-up">
+            <div class="center">
+                <h2 class="form-title" id="login"><span>or </span>Log in</h2>
+                <div class="form-holder">
+                    <form action="adminLogin" method="post">
+                        <input type="email" class="input" placeholder="Email" />
+                        <input type="password" class="input" placeholder="Password" />
+                    </form>
+                </div>
+                <button class="submit-btn">Log in</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
