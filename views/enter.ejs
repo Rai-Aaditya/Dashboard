@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             background-color: rgb(244, 194, 248);
         }
-        .container{
+
+        .container {
             margin: auto;
             display: flex;
             align-items: center;
@@ -17,21 +19,24 @@
             height: 100vh;
             text-align: center;
         }
-        h1{
+
+        h1 {
             font-size: 50px;
             color: white;
-            font-weight:bolder;
+            font-weight: bolder;
             text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
-               1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+                1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
         }
-        button{
+
+        button {
             margin: 20px;
             width: 100px;
             height: 50px;
             cursor: pointer;
             font-size: larger;
         }
-        button:hover{
+
+        button:hover {
             box-shadow: 10px 8px 5px 5px rgba(0, 0, 0, 0.405);
             border: solid white;
             border-top-right-radius: 5px;
@@ -42,13 +47,17 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <form action="/login" method="post">
-            <h1>Enter as</h1>
-            <button value="admin" name="btn1">Admin</button>
-            <button value="user" name="btn2">User</button>
-        </form>
-    </div>
+    <%- include('partials/header') %>
+        <div class="container">
+            <form action="/login" method="post">
+                <h1>Enter as</h1>
+                <button value="admin" name="btn1">Admin</button>
+                <button value="user" name="btn2">User</button>
+            </form>
+        </div>
+        <%- include('partials/footer') %>
 </body>
+
 </html>
